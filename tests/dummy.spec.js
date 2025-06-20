@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
-test('basic dummy test', async ({ page }) => {
-  await page.goto('https://example.com');
+test('check login page title', async ({ page }) => {
+  await page.goto('https://practicetestautomation.com/practice-test-login/');
   const title = await page.title();
-  expect(title).toBe('Example Domain');
+  expect(title).toBe('Test Login | Practice Test Automation');
 });
