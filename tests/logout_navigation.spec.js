@@ -1,10 +1,8 @@
 const { test, expect } = require('@playwright/test');
+const { login } = require('../utils');
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('https://practicetestautomation.com/practice-test-login/');
-  await page.fill('#username', 'student');
-  await page.fill('#password', 'Password123');
-  await page.click('#submit');
+  await login(page);
 });
 
 test('Logout test', async ({ page }) => {
