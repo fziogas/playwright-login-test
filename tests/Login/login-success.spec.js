@@ -6,4 +6,5 @@ test('Successfull login with valid credentials', async ({ page }) => {
 
   await expect(page).toHaveURL('https://practicetestautomation.com/logged-in-successfully/');
   await expect(page.locator('h1')).toHaveText('Logged In Successfully');
+
 });
