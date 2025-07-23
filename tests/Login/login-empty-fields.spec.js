@@ -1,9 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const {
-  fillLoginForm,
-  submitLoginForm,
-  expectLoginFailure,
-} = require('../../utils/helpers');
+  fillLoginForm, submitLoginForm,} = require('../../utils/form-helpers');
+const {expectLoginFailure,} = require('../../utils/expect-helpers');
+
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://practicetestautomation.com/practice-test-login/');
